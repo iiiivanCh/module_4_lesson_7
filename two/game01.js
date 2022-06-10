@@ -1,20 +1,6 @@
 "use strict"
 
 
-// const doGoodbye = (x) => {
-//   const goodbye = x;
-//   if (goodbye === "null" || goodbye === null) {
-//     return alert("До свидания");
-//   }
-//   if (goodbye === "") {
-//     alert("Вы ничего не добавили. До свидания");
-//     return 
-//   }
-// }
-// const doNumber = (userNumber) => userNumber = Number(userNumber);
-
-
-
 const doGame = () => {
   const resultMachine = Math.floor((Math.random() * 101));
   let userNumber

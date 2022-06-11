@@ -3,22 +3,14 @@
 
 const doGenerator = (total, n, m) => {
 
-let min;
-let max;
+  const min = (n < m) ? Math.ceil(n) : Math.ceil(m);
+  const max = (n < m) ? Math.floor(m) : Math.floor(n);
 
-  if (n > m) {
-    max = n;
-    min = m;
-  } else {
-    min = n;
-    max = m;
-  };
+  const result = Array(Math.round(total)).fill(0).map(() => Math.floor((Math.random() * (max - min + 1)) + min));
 
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  let result = Array(total).fill(0);
-  result.forEach((_, i) => result[i] = Math.floor((Math.random() * (max - min + 1)) + min));
   console.log(result);
 }
 
-doGenerator(100, -10.568, 10.909090909);
+doGenerator(5, -10.568, 10.909090909);
+
+// Я не понимаю как применить деструктуризацию при определении min max, ведь нет массива или списка, да еще все одной строкой
